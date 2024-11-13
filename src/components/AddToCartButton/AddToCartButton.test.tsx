@@ -20,6 +20,7 @@ const MockCartProvider = ({ children }: { children: ReactNode }) => {
 		increaseQuantity: jest.fn(),
 		decreaseQuantity: jest.fn(),
 		totalPrice: 0,
+		totalCount: 0,
 		state: { items: [] }
 	};
 

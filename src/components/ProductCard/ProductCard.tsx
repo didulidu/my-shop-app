@@ -3,7 +3,6 @@ import { Product } from '../../types';
 import { useNavigate } from 'react-router-dom';
 import { Description, Name, Price, Card } from './styles';
 import AddToCartButton from '../AddToCartButton';
-import { Tooltip } from 'react-tooltip';
 
 export interface ProductCardProps {
 	product: Product;
@@ -20,9 +19,7 @@ const ProductCard = ({ product }: ProductCardProps) => {
 		<Card onClick={handleProductClick}>
 			<Name>{product.name}</Name>
 			<Price>${product.price.toFixed(2)}</Price>
-			<Tooltip place="bottom">
-				<Description>{product.description}</Description>
-			</Tooltip>
+			<Description>{product.description}</Description>
 			<AddToCartButton product={product} />
 		</Card>
 	);
